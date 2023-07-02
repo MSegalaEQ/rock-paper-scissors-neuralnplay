@@ -7,13 +7,11 @@ import tensorflow as tf
 from tensorflow import keras
 
 def player(prev_play, opponent_history=[], prev_history=[], prediction_data=[]):
-    test = True
     if prev_play != '':
       opponent_history.append(prev_play)
 
     min_random_play = 10
     correct_guess = 0
-    highest_accuracy = 0
 
     early_stopping = EarlyStopping()
 
@@ -43,13 +41,6 @@ def player(prev_play, opponent_history=[], prev_history=[], prediction_data=[]):
       model.compile(loss='sparse_categorical_crossentropy', optimizer='adam', metrics=['accuracy'])
 
       history = model.fit(dataset, epochs=500, shuffle=True, verbose=False, callbacks=[early_stopping])
-      accuracy = history.history['accuracy'][-1]
-      actual_model = model
-
-      if accuracy >= highest_accuracy:
-          highest_accuracy = accuracy
-          best_model = actual_model
-          best_seq = [seq_length, history.epoch[-1]]
         
       if prev_history != []:
           for i in range(0,len(prev_history)):
