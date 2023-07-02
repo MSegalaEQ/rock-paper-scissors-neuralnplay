@@ -21,10 +21,10 @@ All challenge objectives were achieved with the following win rates:
 
 [Collected data .csv files](Data)
 
-The figure below shows plots of the `Correct Guess Rate` versus `Play`.
-![Correct guess rate plotted against play](Results_.png)
+The figure below shows plots of the `Prediction Rate` versus `Play`.
+![Prediction rate plotted against play](Results.png)
 
-The `Correct Guess Rate` is the percentage of successfully predicted opponent plays. Final win rates do not equate to this quantity for two reasons: (1) win rates take into account the entire history of plays and (2) they exclude tied games. The `Correct Guess Rate` is the most suitable parameter to track neural network performance as it indicates exclusively correct predictions.
+The `Prediction Rate` is the percentage of successfully predicted opponent plays. Final win rates do not equate to this quantity for two reasons: (1) win rates take into account the entire history of plays and (2) they exclude tied games. The `Prediction Rate` is the most suitable parameter to track neural network performance as it indicates exclusively correct predictions.
 
 A few observations can be made based on the graphics: (1) Prediction quality improves over time in all cases. This is expected as the opponent's play pattern becomes more consistent with a larger sample size. (2) The first few matches are always unstable. In contrast to a larger sample size, the unpredictability and lack of data explain why predictions are not accurate. (3) The 'Abbey' play generator was particularly difficult to predict. Upon analyzing the play function, it was identified that the opponent's plays have a strong dependency on the neural network play history. This circular learning process hindered effective prediction. To overcome this, a strict training process was necessary.
 
