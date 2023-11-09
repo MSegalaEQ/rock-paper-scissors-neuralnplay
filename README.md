@@ -1,7 +1,7 @@
 # Rock-paper-scissors Neural Network Play Generator
 
 ## Intro
-This is a proposed solution for the [challenge project](https://www.freecodecamp.org/learn/machine-learning-with-python/machine-learning-with-python-projects/rock-paper-scissors) from the freecodecamp.org course *"Machine Learning with Python"*. The challenge is essentially about predicting the opponent's plays in a rock-paper-scissors game. The objective of this challenge is to achieve a win rate of at least 60% in one thousand matches against each of four different artificial inteligence play generators. To accomplish this, a neural network prediction method was used.
+This is a proposed solution for the [challenge project](https://www.freecodecamp.org/learn/machine-learning-with-python/machine-learning-with-python-projects/rock-paper-scissors) from the freecodecamp.org course *"Machine Learning with Python"*. The challenge is essentially about predicting the opponent's plays in a rock-paper-scissors game. The objective of this challenge is to achieve a win rate of at least 60% in one thousand matches against each of four different artificial inteligence play generators. To accomplish this, a neural network prediction method was used. This is a time series problem, whose predictor values are dependent on each other.
 
 The challenge project consist of three Python script files:
 
